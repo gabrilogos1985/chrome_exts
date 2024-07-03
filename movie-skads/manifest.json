@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Movie quick",
+  "version": "1.0",
+  "description": "Watch your movie cuev seamles",
+  "permissions": ["activeTab"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+    "action": {
+        "default_popup": "index.html"
+    }
+    
+}
+
+

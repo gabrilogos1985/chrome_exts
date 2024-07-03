@@ -1,0 +1,46 @@
+<!--
+Html for chrome extension that edits a cookie
+Connect to javascript file called popup.js and CSS file called style.css
+will render a list of current cookies and allow user to edit them
+-->
+
+<html>
+<head>
+    <title>Cookie Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Add a refresh button -->
+    <button id="refresh">Refresh</button>
+    <h1>Cookie Editor</h1>
+    <div id="cookie-list"></div>
+
+
+   <!-- create a form to edit the cookie, this form is hidden onload-->
+    <form id="edit-form" style="display: none;">
+  <!-- show all editable fields defined in function showEditForm in popup.js file -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="value">Value:</label>
+        <input type="text" id="value" name="value" required>
+        <label for="domain">Domain:</label>
+        <input type="text" id="domain" name="domain">
+        <label for="path">Path:</label>
+        <input type="text" id="path" name="path">
+        <label for="expiration">Expires:</label>
+        <input type="text" id="expiration" name="expires">
+        <label for="secure">Secure:</label>
+        <input type="checkbox" id="secure" name="secure">
+        <label for="httpOnly">HttpOnly:</label>
+        <input type="checkbox" id="httponly" name="httpOnly">
+
+        <!-- add a button to save changes and handle request-->
+        <button type="submit">Save</button>
+        <button type="button" id="cancel">Cancel</button>
+    </form>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

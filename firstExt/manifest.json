@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Hi Extension",
+  "version": "1.0",
+  "description": "A simple Chrome Extension",
+  "permissions": ["activeTab", "storage", "cookies"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
+
+// create a background.js file in this directory  and add the following code
+// background.js
+
+
